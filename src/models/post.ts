@@ -12,3 +12,18 @@ interface PostReactions {
   likes: number;
   dislikes: number;
 }
+
+export interface CreatePostForm {
+  title: string,
+  body: string,
+  tags: string[],
+  userId: number
+}
+
+export interface CreatePostResponse {
+  id: number,
+  title: string,
+  body: string,
+  tags: string[],
+  userId: number
+}

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import type { Page } from 'src/models/page';
-import type { Post } from 'src/models/post';
+import type { CreatePostForm, CreatePostResponse, Post } from 'src/models/post';
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
@@ -20,6 +20,10 @@ export default {
    */
   getPosts: async (limit: number, skip: number): Promise<Page<Post>> => {
     const response = await api.get<Page<Post>>(`/posts`, { params: { limit, skip } });
+    return response.data;
+  },
+  createPost: async (form: CreatePostForm): Promise<CreatePostResponse> => {
+    const response = await api.post<CreatePostResponse>(`/posts/add`, form);
     return response.data;
   }
 };
