@@ -2,7 +2,11 @@
 export default {
   content: ['./src/**/*.{vue,js,ts}'],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        'sans': ['Raleway', 'sans-serif']
+      }
+    }
   },
   plugins: [],
   prefix: 'tw-'
