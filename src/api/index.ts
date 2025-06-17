@@ -19,7 +19,7 @@ export default {
    * using utility methods.
    */
   getPosts: async (limit: number, skip: number): Promise<Page<Post>> => {
-    const response = await api.get<Page<Post>>(`/posts`, { params: { limit, skip } });
+    const response = await api.get<Page<Post>>(`/posts`, { params: { limit, skip, sortBy: 'id', order: 'desc' } });
     return response.data;
   },
   createPost: async (form: CreatePostForm): Promise<CreatePostResponse> => {

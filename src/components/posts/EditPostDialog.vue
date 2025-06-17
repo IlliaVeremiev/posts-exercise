@@ -18,7 +18,6 @@
 
       <q-card-section>
         <q-form ref="form" @submit="onOKClick" greedy class="tw-flex tw-flex-col tw-gap-1">
-
           <q-input
             v-model="title"
             :label="$t('posts.editPostDialog.titleLabel')"

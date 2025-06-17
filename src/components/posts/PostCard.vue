@@ -7,6 +7,9 @@
     <div class="tw-font-normal tw-text-sm tw-line-clamp-3 post-card-body">
       {{ post.body }}
     </div>
+
+    <!--  TODO add router links for each tag in post.tags  -->
+    <!--  TODO add icons with counter for views/likes/dislikes  -->
   </q-card>
 </template>
 
